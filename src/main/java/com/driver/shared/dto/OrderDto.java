@@ -2,6 +2,11 @@ package com.driver.shared.dto;
 
 import java.io.Serializable;
 
+import lombok.*;
+
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
 public class OrderDto{
 
 	private long id;

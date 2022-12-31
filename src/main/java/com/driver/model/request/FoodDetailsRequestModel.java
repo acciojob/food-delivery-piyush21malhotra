@@ -1,5 +1,10 @@
 package com.driver.model.request;
 
+import lombok.*;
+
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
 public class FoodDetailsRequestModel {
 
 	private String foodName;
