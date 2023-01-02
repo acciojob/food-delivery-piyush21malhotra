@@ -38,8 +38,8 @@ public class OrderController {
 		
 	@PutMapping(path="/{id}")
 	public OrderDetailsResponse updateOrder(@PathVariable String id, @RequestBody OrderDetailsRequestModel order) throws Exception{
-		OrderDto orderDto = orderService.updateOrderDetails(id, OrderConverter.convertRequestModelToDto(order));
-		return OrderConverter.convertDtoToResponse(orderDto);
+		OrderDto orderDtos = orderService.updateOrderDetails(id, OrderConverter.convertRequestModelToDto(order));
+		return OrderConverter.convertDtoToResponse(orderDtos);
 	}
 	
 	@DeleteMapping(path = "/{id}")
